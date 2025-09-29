@@ -90,7 +90,23 @@ export default function Contact() {
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
               
-              <form className="space-y-6">
+              <form 
+                name="contact" 
+                method="POST" 
+                action="/thank-you"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                className="space-y-6"
+              >
+                {/* Hidden fields for Netlify form handling */}
+                <input type="hidden" name="form-name" value="contact" />
+                <div style={{ display: 'none' }}>
+                  <label>
+                    Don't fill this out if you're human: 
+                    <input name="bot-field" />
+                  </label>
+                </div>
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -98,6 +114,7 @@ export default function Contact() {
                     </label>
                     <input
                       type="text"
+                      name="name"
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       placeholder="Your full name"
@@ -110,6 +127,7 @@ export default function Contact() {
                     </label>
                     <input
                       type="tel"
+                      name="phone"
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       placeholder="+91 XXXXX XXXXX"
@@ -123,6 +141,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="email"
+                    name="email"
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     placeholder="your.email@example.com"
@@ -135,6 +154,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="text"
+                    name="company"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     placeholder="Your company name"
                   />
@@ -144,7 +164,7 @@ export default function Contact() {
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Service Interest
                   </label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                  <select name="service" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                     <option value="">Select a service</option>
                     <option value="power-distribution">Power Distribution Panels</option>
                     <option value="mcc-dcc">Motor & Drive Control Centers</option>
@@ -160,6 +180,7 @@ export default function Contact() {
                     Project Details *
                   </label>
                   <textarea
+                    name="message"
                     required
                     rows={6}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
