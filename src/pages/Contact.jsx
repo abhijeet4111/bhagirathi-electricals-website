@@ -97,6 +97,13 @@ export default function Contact() {
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 className="space-y-6"
+                onSubmit={(e) => {
+                  // In development, redirect to thank you page
+                  if (window.location.hostname === 'localhost') {
+                    e.preventDefault();
+                    window.location.href = '/thank-you';
+                  }
+                }}
               >
                 {/* Hidden fields for Netlify form handling */}
                 <input type="hidden" name="form-name" value="contact" />
