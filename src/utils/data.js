@@ -179,6 +179,7 @@ export const navigationItems = [
   { name: 'About Us', href: '/about' },
   { name: 'Services', href: '/services' },
   { name: 'Projects', href: '/projects' },
+  { name: 'Gallery', href: '/gallery' },
   { name: 'Contact', href: '/contact' }
 ];
 
