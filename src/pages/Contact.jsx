@@ -60,8 +60,8 @@ export default function Contact() {
                   <Mail className="h-5 w-5 text-blue-600" />
                   <div>
                     <p className="font-semibold text-gray-900">Email</p>
-                    <a href="mailto:bhagirathielect@yahoo.co.in" className="text-blue-600 hover:text-blue-700">
-                      bhagirathielect@yahoo.co.in
+                    <a href="mailto:bhagirathielect@gmail.com" className="text-blue-600 hover:text-blue-700">
+                    bhagirathielect@gmail.com
                     </a>
                   </div>
                 </div>
@@ -188,7 +188,7 @@ export default function Contact() {
                 Call Us Now
               </Button>
             </a>
-            <a href="mailto:bhagirathielect@yahoo.co.in">
+            <a href="mailto:bhagirathielect@gmail.com">
               <Button className="bg-white text-blue-900 hover:bg-gray-100">
                 Email Us
               </Button>

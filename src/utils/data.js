@@ -9,7 +9,7 @@ export const companyInfo = {
   clientsServed: '200+',
   contact: {
     phone: '+91-83798-37623',
-    email: 'bhagirathielect@yahoo.co.in',
+    email: 'bhagirathielect@gmail.com',
     address: 'Shivane, Pune – 411023'
   },
   workingHours: 'Mon - Sat: 9:00 AM - 6:00 PM'
