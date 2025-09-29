@@ -8,9 +8,9 @@ export const companyInfo = {
   projectsCompleted: '500+',
   clientsServed: '200+',
   contact: {
-    phone: '+91-98765-43210',
-    email: 'info@bhagirattielectricals.com',
-    address: 'Industrial Area, Phase II, Sector 45, Gurgaon, Haryana - 122001'
+    phone: '+91-83798-37623',
+    email: 'bhagirathielect@yahoo.co.in',
+    address: 'Shivane, Pune – 411023'
   },
   workingHours: 'Mon - Sat: 9:00 AM - 6:00 PM'
 };

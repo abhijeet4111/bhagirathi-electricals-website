@@ -31,7 +31,7 @@ export default function HeroSection() {
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="border-white text-white hover:bg-white hover:text-blue-900 w-full sm:w-auto"
+                  className="bg-white text-blue-900 hover:bg-gray-100 w-full sm:w-auto"
                 >
                   Get Free Quote
                 </Button>
