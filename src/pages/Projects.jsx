@@ -14,7 +14,7 @@ export default function Projects() {
       title: 'Automotive Manufacturing Plant - Power Infrastructure',
       category: 'Manufacturing',
       description: 'Complete electrical panel installation for automotive manufacturing facility including MCC, DCC, and APFC panels with advanced automation systems.',
-      image: '/assets/photos/project1.jpg',
+      image: '/src/assets/photos/20160422_150737.jpg',
       year: '2023',
       client: 'ABC Automotive Ltd.',
       location: 'Chennai, Tamil Nadu',
@@ -34,7 +34,7 @@ export default function Projects() {
       title: 'Multi-Specialty Hospital Emergency Power System',
       category: 'Healthcare',
       description: 'Critical power backup system with AMF panels and synchronization for 500-bed hospital ensuring uninterrupted medical operations.',
-      image: '/assets/photos/project2.jpg',
+      image: '/src/assets/photos/DSC01453.JPG',
       year: '2023',
       client: 'City General Hospital',
       location: 'Mumbai, Maharashtra',
@@ -54,7 +54,7 @@ export default function Projects() {
       title: 'Municipal Water Treatment Plant Automation',
       category: 'Infrastructure',
       description: 'Complete automation solution with PLC/Drive panels for municipal water treatment facility serving 2 lakh population.',
-      image: '/assets/photos/project3.jpg',
+      image: '/src/assets/photos/IMG_4007 - Copy.JPG',
       year: '2022',
       client: 'Municipal Corporation',
       location: 'Pune, Maharashtra',
@@ -74,7 +74,7 @@ export default function Projects() {
       title: 'Textile Manufacturing Complex',
       category: 'Manufacturing',
       description: 'Comprehensive electrical infrastructure for large textile manufacturing complex with energy optimization systems.',
-      image: '/assets/photos/project4.jpg',
+      image: '/src/assets/photos/20140522_130355 - Copy.jpg',
       year: '2022',
       client: 'Textile Industries Group',
       location: 'Coimbatore, Tamil Nadu',
@@ -94,7 +94,7 @@ export default function Projects() {
       title: 'Shopping Mall Power Distribution',
       category: 'Commercial',
       description: 'Modern power distribution system for large shopping mall with advanced energy management and safety features.',
-      image: '/assets/photos/project5.jpg',
+      image: '/src/assets/photos/IMG_4112 - Copy.JPG',
       year: '2022',
       client: 'Metro Mall Developers',
       location: 'Bangalore, Karnataka',
@@ -114,7 +114,7 @@ export default function Projects() {
       title: 'Solar Power Plant Control Systems',
       category: 'Power & Energy',
       description: '50MW solar power plant control and monitoring systems with grid synchronization capabilities.',
-      image: '/assets/photos/project6.jpg',
+      image: '/src/assets/photos/20140524_173009 - Copy.jpg',
       year: '2021',
       client: 'Green Energy Solutions',
       location: 'Rajasthan',
@@ -205,11 +205,20 @@ export default function Projects() {
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer"
                 onClick={() => setSelectedProject(project)}
               >
-                <div className="h-48 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-                  <Building className="h-16 w-16 text-blue-600" />
-                  <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
-                    <span className="text-white font-semibold">Project Image</span>
+                <div className="h-48 relative overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
+                  />
+                  <div className="hidden w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 items-center justify-center">
+                    <Building className="h-16 w-16 text-blue-600" />
                   </div>
+                  <div className="absolute inset-0 bg-black bg-opacity-20 hover:bg-opacity-10 transition-opacity"></div>
                 </div>
                 
                 <div className="p-6">
@@ -330,8 +339,19 @@ export default function Projects() {
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
-                  <div className="h-64 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg flex items-center justify-center mb-6">
-                    <Building className="h-20 w-20 text-blue-600" />
+                  <div className="h-64 relative overflow-hidden rounded-lg mb-6">
+                    <img 
+                      src={selectedProject.image} 
+                      alt={selectedProject.title}
+                      className="w-full h-full object-cover rounded-lg"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.nextSibling.style.display = 'flex';
+                      }}
+                    />
+                    <div className="hidden w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 items-center justify-center rounded-lg">
+                      <Building className="h-20 w-20 text-blue-600" />
+                    </div>
                   </div>
                   
                   <div className="grid grid-cols-2 gap-4 text-sm">
