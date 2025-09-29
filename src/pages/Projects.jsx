@@ -314,7 +314,7 @@ export default function Projects() {
               </Button>
             </a>
             <a href="/services">
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3">
+              <Button variant="outline" className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-3">
                 View Our Services
               </Button>
             </a>

@@ -184,7 +184,7 @@ export default function Contact() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+918379837623">
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900">
+              <Button variant="outline" className="bg-white text-blue-900 hover:bg-gray-100">
                 Call Us Now
               </Button>
             </a>
